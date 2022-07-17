@@ -12,18 +12,22 @@ namespace SimpleApi.Infra.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Books",
+                name: "Book",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Author = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "varchar", nullable: false),
+                    Author = table.Column<string>(type: "varchar", nullable: false),
                     PageNumbers = table.Column<int>(type: "integer", nullable: false),
-                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    ReleaseDate = table.Column<DateTime>(type: "timestamp", nullable: true),
+                    DeletedIn = table.Column<DateTime>(type: "timestamp", nullable: true),
+                    Active = table.Column<bool>(type: "boolean", nullable: false),
+                    RegisteredIn = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    UpdatedIn = table.Column<DateTime>(type: "timestamp", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Books", x => x.Id);
+                    table.PrimaryKey("PK_Book", x => x.Id);
                 });
         }
 
@@ -31,7 +35,7 @@ namespace SimpleApi.Infra.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "Book");
         }
     }
 }

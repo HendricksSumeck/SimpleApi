@@ -12,7 +12,7 @@ using SimpleApi.Infra.Data.Contexts;
 namespace SimpleApi.Infra.Data.Migrations
 {
     [DbContext(typeof(SimpleApiContext))]
-    [Migration("20220717163357_Inicial")]
+    [Migration("20220717190216_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -28,26 +28,37 @@ namespace SimpleApi.Infra.Data.Migrations
             modelBuilder.Entity("SimpleApi.Domain.Entitys.Book", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Author")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("varchar");
+
+                    b.Property<DateTime?>("DeletedIn")
+                        .HasColumnType("timestamp");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("varchar");
 
                     b.Property<int>("PageNumbers")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime>("RegisteredIn")
+                        .HasColumnType("timestamp");
+
                     b.Property<DateTime?>("ReleaseDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp");
+
+                    b.Property<DateTime>("UpdatedIn")
+                        .HasColumnType("timestamp");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books");
+                    b.ToTable("Book", (string)null);
                 });
 #pragma warning restore 612, 618
         }

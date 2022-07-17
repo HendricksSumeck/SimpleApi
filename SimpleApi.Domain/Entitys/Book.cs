@@ -1,8 +1,9 @@
-﻿namespace SimpleApi.Domain.Entitys;
+﻿using SimpleApi.Domain.Abstractions;
 
-public class Book
+namespace SimpleApi.Domain.Entitys;
+
+public class Book : Entity
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Author { get; set; }
     public int PageNumbers { get; set; }
