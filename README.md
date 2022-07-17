@@ -7,16 +7,16 @@ Este projeto implementa os conceitos básicos de construção de uma API Web mí
 
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/HendricksSumeck/MinimalApi?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/HendricksSumeck/SimpleApi?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/HendricksSumeck/MinimalApi">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/HendricksSumeck/SimpleApi">
 
   <a href="https://github.com/HendricksSumeck/MinimalApi">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/HendricksSumeck/MinimalApi">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/HendricksSumeck/SimpleApi">
   </a>
 
   <a href="https://github.com/HendricksSumeck/MinimalApi/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/HendricksSumeck/MinimalApi?style=social">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/HendricksSumeck/SimpleApi?style=social">
   </a>
 </p>
 
@@ -45,7 +45,7 @@ Além disto é bom ter uma IDE para trabalhar com o código como [Visual Studio]
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:HendricksSumeck/MinimalApi.git
+$ git clone git@github.com:HendricksSumeck/SimpleApi.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd SimpleApi
@@ -63,7 +63,7 @@ $ dotnet run
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:HendricksSumeck/MinimalApi.git
+$ git clone git@github.com:HendricksSumeck/SimpleApi.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd SimpleApi
@@ -76,7 +76,7 @@ $ docker-compose -p pgslq -d
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:HendricksSumeck/MinimalApi.git
+$ git clone git@github.com:HendricksSumeck/SimpleApi.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd SimpleApi
