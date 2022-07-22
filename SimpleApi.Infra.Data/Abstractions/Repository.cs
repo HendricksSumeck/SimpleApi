@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SimpleApi.Domain.Abstractions;
 using SimpleApi.Infra.Data.Interfaces;
+using SimpleApi.Shared.Data;
 
 namespace SimpleApi.Infra.Data.Abstractions;
 

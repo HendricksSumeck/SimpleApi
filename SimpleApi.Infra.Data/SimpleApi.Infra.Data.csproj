@@ -21,6 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SimpleApi.Domain\SimpleApi.Domain.csproj" />
+      <ProjectReference Include="..\SimpleApi.Shared\SimpleApi.Shared.csproj" />
     </ItemGroup>
 
 </Project>

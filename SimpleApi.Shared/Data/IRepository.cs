@@ -1,4 +1,4 @@
-﻿namespace SimpleApi.Infra.Data.Interfaces;
+﻿namespace SimpleApi.Shared.Data;
 
 public interface IRepository<TEntity> where TEntity : class
 {
