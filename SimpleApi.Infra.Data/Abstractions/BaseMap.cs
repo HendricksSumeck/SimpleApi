@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace SimpleApi.Infra.Data.Mappings;
+namespace SimpleApi.Infra.Data.Abstractions;
 
 public abstract class BaseMap<T> : IEntityTypeConfiguration<T> where T: class
 {

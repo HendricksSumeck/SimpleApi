@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SimpleApi.Domain.Entitys;
+using SimpleApi.Infra.Data.Abstractions;
 using SimpleApi.Infra.Data.Utils;
 
 namespace SimpleApi.Infra.Data.Mappings;

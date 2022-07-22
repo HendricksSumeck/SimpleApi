@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SimpleApi.Domain.Entitys;
+using SimpleApi.Infra.Data.Interfaces;
 
 namespace SimpleApi.Infra.Data.Contexts;
 
-public class SimpleApiContext : DbContext
+public class SimpleApiContext : DbContext, ISimpleApiContext
 {
     public DbSet<Book> Books { get; set; }
     

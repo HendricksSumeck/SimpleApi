@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SimpleApi.Domain.Abstractions;
 using SimpleApi.Infra.Data.Utils;
 
-namespace SimpleApi.Infra.Data.Mappings;
+namespace SimpleApi.Infra.Data.Abstractions;
 
 public abstract class BaseEntityMap<T> : BaseMap<T> where T : Entity
 {
