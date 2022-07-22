@@ -4,7 +4,7 @@ using SimpleApi.Infra.Data.Interfaces;
 
 namespace SimpleApi.Infra.Data.Contexts;
 
-public class SimpleApiContext : DbContext, ISimpleApiContext
+public class SimpleApiDbContext : DbContext, ISimpleApiDbContext
 {
     public DbSet<Book> Books { get; set; }
     

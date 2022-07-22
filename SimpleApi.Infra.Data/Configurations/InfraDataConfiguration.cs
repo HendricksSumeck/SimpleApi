@@ -8,6 +8,6 @@ public static class InfraDataConfiguration
 {
     public static void AddInfraDataConfiguration(this IServiceCollection services)
     {
-        services.AddDbContext<SimpleApiContext>();
+        services.AddDbContext<SimpleApiDbContext>();
     }
 }

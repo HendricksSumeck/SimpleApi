@@ -11,7 +11,7 @@ using SimpleApi.Infra.Data.Contexts;
 
 namespace SimpleApi.Infra.Data.Migrations
 {
-    [DbContext(typeof(SimpleApiContext))]
+    [DbContext(typeof(SimpleApiDbContext))]
     [Migration("20220717190216_Inicial")]
     partial class Inicial
     {

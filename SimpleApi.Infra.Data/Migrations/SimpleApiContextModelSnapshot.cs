@@ -10,7 +10,7 @@ using SimpleApi.Infra.Data.Contexts;
 
 namespace SimpleApi.Infra.Data.Migrations
 {
-    [DbContext(typeof(SimpleApiContext))]
+    [DbContext(typeof(SimpleApiDbContext))]
     partial class SimpleApiContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
