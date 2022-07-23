@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SimpleApi.Domain.Interfaces;
 
 namespace SimpleApi.Api.Controllers;
 
@@ -7,17 +8,16 @@ namespace SimpleApi.Api.Controllers;
 public class BooksController : ControllerBase
 {
 
-    // private readonly DataContext _uow;
-    //
-    // public BooksController(DataContext uow)
-    // {
-    //     _uow = uow;
-    // }
+    private readonly IBookRepository _uow;
+    
+    public BooksController(IBookRepository uow)
+    {
+        _uow = uow;
+    }
 
     [HttpGet("books")]
     public IResult GetBooks()
     {
-        //var book = _uow.Books.ToList();
         return Results.Ok();
     }
 }
