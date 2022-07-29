@@ -1,6 +1,6 @@
-﻿namespace SimpleApi.Api;
+﻿namespace SimpleApi.Application.ViewModels;
 
-public class BookDto
+public class BookViewModel
 {
     public string Name { get; set; }
     public string Author { get; set; }

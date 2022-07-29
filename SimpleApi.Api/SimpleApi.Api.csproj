@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\SimpleApi.Application\SimpleApi.Application.csproj" />
       <ProjectReference Include="..\SimpleApi.Infra.Data\SimpleApi.Infra.Data.csproj" />
     </ItemGroup>
 
