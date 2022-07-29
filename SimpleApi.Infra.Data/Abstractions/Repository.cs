@@ -41,6 +41,12 @@ public abstract class Repository<TContext, TEntity> : IRepository<TEntity>
             .AsNoTracking()
             .FirstOrDefaultAsync(e => e.Id == id);
 
+    public IQueryable<TEntity> GetAll()
+    {
+        return DbSet
+            .IgnoreDeleted();
+    }
+
     public virtual async Task AddAsync(TEntity entity)
     {
         await Db
