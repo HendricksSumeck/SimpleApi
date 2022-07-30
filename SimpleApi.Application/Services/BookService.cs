@@ -27,15 +27,23 @@ public class BookService : Service<Book, IBookRepository>, IBookService
 
     public async Task<BookViewModel> Update(BookDto bookDto)
     {
-        var book = await _repository.GetById(bookDto.BookId.Value);
+        if (bookDto.BookId is not null)
+        {
+            var book = await _repository.GetById(bookDto.BookId.Value);
 
-        book.Name = bookDto.Name;
-        book.Author = bookDto.Author;
-        book.PageNumbers = bookDto.PageNumbers;
-        book.ReleaseDate = bookDto.ReleaseDate;
-        
-        _repository.Update(book);
+            if (book is not null)
+            {
+                book.Name = bookDto.Name;
+                book.Author = bookDto.Author;
+                book.PageNumbers = bookDto.PageNumbers;
+                book.ReleaseDate = bookDto.ReleaseDate;
 
-        return _mapper.Map<BookViewModel>(book);
+                await _repository.Update(book);
+
+                return _mapper.Map<BookViewModel>(book);
+            }
+        }
+
+        return _mapper.Map<BookViewModel>(false);;
     }
 }

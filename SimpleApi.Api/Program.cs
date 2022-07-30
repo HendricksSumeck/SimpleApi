@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-//Add Auto Maper Config
+//Add Auto Mapper Config
 builder.Services.AddAutoMapperConfig();
 
 // Add Infra Data Config
@@ -21,7 +21,7 @@ builder.Services.AddRepositorys();
 
 var app = builder.Build();
 
-//TODO - Refatorar e enteder isto 
+//TODO - Refactor and understand it 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 app.UseSwagger();

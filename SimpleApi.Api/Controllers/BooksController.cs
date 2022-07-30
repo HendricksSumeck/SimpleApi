@@ -30,7 +30,7 @@ public class BooksController : ControllerBase
     {
         var book = await _bookService.GetById(id);
 
-        if (book != null) await _bookService.Delete(book);
+        if (book is not null) await _bookService.Delete(book);
 
         return true;
     }
