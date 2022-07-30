@@ -29,13 +29,13 @@ public abstract class Service<TEntity, TRepository> : IService<TEntity>
         await _repository.AddAsync(entity);
     }
 
-    public void Update(TEntity entity)
+    public async Task Update(TEntity entity)
     {
-        _repository.Update(entity);
+        await _repository.Update(entity);
     }
 
-    public void Delete(TEntity entity, bool destroy = false)
+    public async Task Delete(TEntity entity, bool destroy = false)
     {
-        _repository.Delete(entity, destroy);
+        await _repository.Delete(entity, destroy);
     }
 }

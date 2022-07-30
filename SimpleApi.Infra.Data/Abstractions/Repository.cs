@@ -56,7 +56,7 @@ public abstract class Repository<TContext, TEntity> : IRepository<TEntity>
         await Commit();
     }
 
-    public virtual async void Update(TEntity entity)
+    public virtual async Task Update(TEntity entity)
     {
         entity.Update();
         
@@ -67,7 +67,7 @@ public abstract class Repository<TContext, TEntity> : IRepository<TEntity>
         await Commit();
     }
 
-    public virtual async void Delete(TEntity entity, bool destroy = false)
+    public virtual async Task Delete(TEntity entity, bool destroy = false)
     {
         if (destroy)
         {

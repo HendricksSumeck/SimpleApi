@@ -18,13 +18,7 @@ public class BookService : Service<Book, IBookRepository>, IBookService
 
     public async Task<BookViewModel> AddAsync(BookDto bookDto)
     {
-        var book = new Book()
-        {
-            Name= bookDto.Name,
-            Author = bookDto.Author,
-            PageNumbers = bookDto.PageNumbers,
-            ReleaseDate = bookDto.ReleaseDate,
-        };
+        var book = _mapper.Map<Book>(bookDto);
         
         await _repository.AddAsync(book);
 

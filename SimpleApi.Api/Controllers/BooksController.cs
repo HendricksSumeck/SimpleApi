@@ -29,8 +29,8 @@ public class BooksController : ControllerBase
     public async Task<bool> DeleteBook(Guid id)
     {
         var book = await _bookService.GetById(id);
-        
-        _bookService.Delete(book);
+
+        if (book != null) await _bookService.Delete(book);
 
         return true;
     }
