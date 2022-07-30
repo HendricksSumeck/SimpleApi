@@ -4,7 +4,6 @@ using SimpleApi.Application.Dtos;
 using SimpleApi.Application.Interfaces;
 using SimpleApi.Application.ViewModels;
 using SimpleApi.Domain.Entitys;
-using SimpleApi.Domain.Interfaces;
 
 namespace SimpleApi.Api.Controllers;
 

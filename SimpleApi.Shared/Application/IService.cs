@@ -1,4 +1,4 @@
-﻿namespace SimpleApi.Shared.Domain;
+﻿namespace SimpleApi.Shared.Application;
 
 public interface IService<TEntity>
     where TEntity : class

@@ -1,7 +1,7 @@
 ﻿using SimpleApi.Application.Dtos;
 using SimpleApi.Application.ViewModels;
 using SimpleApi.Domain.Entitys;
-using SimpleApi.Shared.Domain;
+using SimpleApi.Shared.Application;
 
 namespace SimpleApi.Application.Interfaces;
 

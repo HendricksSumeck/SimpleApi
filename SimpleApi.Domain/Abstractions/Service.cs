@@ -1,5 +1,5 @@
 ﻿using SimpleApi.Shared.Data;
-using SimpleApi.Shared.Domain;
+using SimpleApi.Shared.Application;
 
 namespace SimpleApi.Domain.Abstractions;
 
