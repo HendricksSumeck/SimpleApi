@@ -19,7 +19,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<BookViewModel> AddBook([FromBody] BookDto bookDto)
+    public async Task<ActionResult<BookViewModel>> AddBook([FromBody] BookDto bookDto)
     {
         return await _bookService.AddAsync(bookDto);
     }
@@ -35,19 +35,19 @@ public class BooksController : ControllerBase
     }
     
     [HttpPut("{id:guid}")]
-    public async Task<BookViewModel> UpdateBook([FromBody] BookDto bookDto, Guid id)
+    public async Task<ActionResult<BookViewModel>> UpdateBook([FromBody] BookDto bookDto, Guid id)
     {
         return await _bookService.Update(bookDto.AtribuirId(id));
     }
     
     [HttpGet("{id:guid}")]
-    public async Task<Book?> GetBookById(Guid id)
+    public async Task<ActionResult<Book>> GetBookById(Guid id)
     {
         return await _bookService.GetById(id);
     }
     
     [HttpGet]
-    public async Task<List<Book>> GetBooks()
+    public async Task<ActionResult<List<Book>>> GetBooks()
     {
         return await _bookService.GetAll().ToListAsync();
     }
