@@ -1,5 +1,7 @@
-﻿using SimpleApi.Application.Dtos;
+﻿using AutoMapper;
+using SimpleApi.Application.Dtos;
 using SimpleApi.Application.Interfaces;
+using SimpleApi.Application.ViewModels;
 using SimpleApi.Domain.Abstractions;
 using SimpleApi.Domain.Entitys;
 using SimpleApi.Domain.Interfaces;
@@ -8,11 +10,13 @@ namespace SimpleApi.Application.Services;
 
 public class BookService : Service<Book, IBookRepository>, IBookService
 {
-    public BookService(IBookRepository repository) : base(repository)
+    private readonly IMapper _mapper;
+    public BookService(IBookRepository repository, IMapper mapper) : base(repository)
     {
+        _mapper = mapper;
     }
 
-    public async Task<Book> AddAsync(BookDto bookDto)
+    public async Task<BookViewModel> AddAsync(BookDto bookDto)
     {
         var book = new Book()
         {
@@ -24,10 +28,10 @@ public class BookService : Service<Book, IBookRepository>, IBookService
         
         await _repository.AddAsync(book);
 
-        return book;
+        return _mapper.Map<BookViewModel>(book);
     }
 
-    public async Task<Book> Update(BookDto bookDto)
+    public async Task<BookViewModel> Update(BookDto bookDto)
     {
         var book = await _repository.GetById(bookDto.BookId.Value);
 
@@ -38,6 +42,6 @@ public class BookService : Service<Book, IBookRepository>, IBookService
         
         _repository.Update(book);
 
-        return book;
+        return _mapper.Map<BookViewModel>(book);
     }
 }

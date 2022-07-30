@@ -4,9 +4,9 @@ using SimpleApi.Infra.Data.Interfaces;
 
 namespace SimpleApi.Infra.Data.Configurations;
 
-public static class InfraDataConfiguration
+public static class InfraDataConfig
 {
-    public static void AddInfraDataConfiguration(this IServiceCollection services)
+    public static void AddInfraDataConfig(this IServiceCollection services)
     {
         services.AddDbContext<ISimpleApiDbContext, SimpleApiDbContext>(ServiceLifetime.Transient);
         services.AddTransient(factory => new Lazy<ISimpleApiDbContext>(factory.GetService<ISimpleApiDbContext>));

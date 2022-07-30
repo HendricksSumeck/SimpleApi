@@ -1,8 +1,6 @@
-using SimpleApi.Application.Interfaces;
-using SimpleApi.Application.Services;
-using SimpleApi.Domain.Interfaces;
 using SimpleApi.Infra.Data.Configurations;
-using SimpleApi.Infra.Data.Repositories;
+using SimpleApi.Infra.IoC.Configurations;
+using SimpleApi.Infra.IoC.Injectors;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +9,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddInfraDataConfiguration();
+//Add Auto Maper Config
+builder.Services.AddAutoMapperConfig();
 
-builder.Services.AddTransient<IBookRepository, BookRepository>();
-builder.Services.AddTransient<IBookService, BookService>();
+// Add Infra Data Config
+builder.Services.AddInfraDataConfig();
+
+// Add IoC Services
+builder.Services.AddServices();
+builder.Services.AddRepositorys();
 
 var app = builder.Build();
 

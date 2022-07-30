@@ -13,6 +13,7 @@
     <ItemGroup>
       <ProjectReference Include="..\SimpleApi.Application\SimpleApi.Application.csproj" />
       <ProjectReference Include="..\SimpleApi.Infra.Data\SimpleApi.Infra.Data.csproj" />
+      <ProjectReference Include="..\SimpleApi.Infra.IoC\SimpleApi.Infra.IoC.csproj" />
     </ItemGroup>
 
 </Project>
