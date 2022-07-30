@@ -86,6 +86,14 @@ $ dotnet ef --startup-project SimpleApi.Infra.Data/ migrations add Inicial --con
 
 # Executar para criar o banco
 $ dotnet ef database update --startup-project SimpleApi.Infra.Data/ --context SimpleApiContext
+
+# Ou
+
+# Entrar no projeto SimpleApi.Migrator
+$ cd SimpleApi.Migrator
+
+# Executar o projeto
+$ dotnet run
 ```
 
 ## 🚀 Autor
